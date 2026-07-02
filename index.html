@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dr. Robert Telmann - Transplante Capilar | Excelência Clínica</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER / NAV ===== -->
+  <header class="header" id="top">
+    <nav class="nav container">
+      <a href="#top" class="nav__logo">
+        <img src="logo_telmannclinic.png" alt="Telmann Clinic" class="nav__logo-img" />
+      </a>
+      <ul class="nav__links">
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#results">Resultados</a></li>
+        <li><a href="#dr-telman">Robert Telmann</a></li>
+      </ul>
+      <a href="#triage" class="btn btn--primary">Agendar Agora</a>
+      <button class="nav__burger" id="navBurger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#expertise" class="mobile-link">Expertise</a></li>
+        <li><a href="#results" class="mobile-link">Resultados</a></li>
+        <li><a href="#dr-telman" class="mobile-link">Robert Telman</a></li>
+        <li><a href="#triage" class="btn btn--primary mobile-link">Agendar Agora</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="expertise">
+    <div class="hero__overlay"></div>
+    <div class="hero__content container" style="text-align:center; align-items:center; display:flex; flex-direction:column;">
+      <img src="logo_telmannclinic.png" alt="Telmann Clinic" style="max-width: 480px; width: 100%; margin-bottom: 32px;" />
+      <p class="hero__desc">
+        "A Telmann Clinic acredita que recuperar a confiança começa pelo cuidado com a saúde capilar, guiando nossa equipe com paixão e profissionalismo."
+      </p>
+      <a href="#triage" class="btn btn--gold">Começar Triagem Online</a>
+    </div>
+  </section>
+
+  <!-- ===== TRIAGEM ===== -->
+  <section class="triage" id="triage">
+    <div class="container triage__inner">
+      <span class="eyebrow">Análise Preliminar</span>
+      <h2>Responda 3 perguntas rápidas para iniciarmos sua jornada de transformação personalizada.</h2>
+      <div class="quiz" id="quiz">
+
+        <!-- STEP 1 -->
+        <div class="quiz__step active" id="step1">
+          <h3>Há quanto tempo você percebe a queda capilar?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-next="step2">Recente (menos de 1 ano)<span class="material-icons">arrow_forward</span></button>
+            <button class="quiz__option" data-next="step2">De 1 a 3 anos<span class="material-icons">arrow_forward</span></button>
+            <button class="quiz__option" data-next="step2">Mais de 5 anos<span class="material-icons">arrow_forward</span></button>
+          </div>
+        </div>
+
+        <!-- STEP 2 — Grau de calvície com imagens individuais -->
+        <div class="quiz__step" id="step2">
+          <h3>Qual é o seu grau de calvície?</h3>
+          <div class="quiz__calvicie-grid">
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Entradas">
+              <img src="entradas.jpeg" alt="Entradas" class="quiz__calvicie-img" />
+            </button>
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Entradas e coroa">
+              <img src="entradas_a_coroa.jpeg" alt="Entradas e coroa" class="quiz__calvicie-img" />
+            </button>
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Calvície moderada">
+              <img src="calvice_moderada.jpeg" alt="Calvície moderada" class="quiz__calvicie-img" />
+            </button>
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Calvície extrema">
+              <img src="calvicie_extrema.jpeg" alt="Calvície extrema" class="quiz__calvicie-img" />
+            </button>
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Irregular">
+              <img src="irregular.jpeg" alt="Irregular" class="quiz__calvicie-img" />
+            </button>
+
+            <button class="quiz__calvicie-card" data-next="step3" data-label="Queda total">
+              <img src="queda_total.jpeg" alt="Queda total" class="quiz__calvicie-img" />
+            </button>
+
+          </div>
+          <button class="quiz__back" data-back="step1"><span class="material-icons">arrow_back</span> Voltar para a anterior</button>
+        </div>
+
+        <!-- STEP 3 -->
+        <div class="quiz__step" id="step3">
+          <h3>Qual é seu objetivo com o transplante?</h3>
+          <div class="quiz__options">
+            <button class="quiz__option" data-next="step4">Alta densidade e volume<span class="material-icons">arrow_forward</span></button>
+            <button class="quiz__option" data-next="step4">Linha frontal natural<span class="material-icons">arrow_forward</span></button>
+            <button class="quiz__option" data-next="step4">Cobertura geral<span class="material-icons">arrow_forward</span></button>
+          </div>
+          <button class="quiz__back" data-back="step2"><span class="material-icons">arrow_back</span> Voltar para a anterior</button>
+        </div>
+
+        <!-- STEP 4 — Dados pessoais -->
+        <div class="quiz__step" id="step4">
+          <h3>Preencha seus dados para continuar</h3>
+          <div class="quiz__form">
+            <input type="text" id="nomeInput" placeholder="Preencha seu nome completo" class="quiz__input" />
+            <input type="email" id="emailInput" placeholder="Preencha com seu e-mail" class="quiz__input" />
+            <input type="tel" id="telefoneInput" placeholder="Preencha com seu número de celular" class="quiz__input" />
+            <button class="btn btn--gold" id="btnEnviar" style="width:100%; justify-content:center;">
+              <span class="material-icons">chat</span>
+              Enviar para WhatsApp
+            </button>
+          </div>
+          <button class="quiz__back" data-back="step3"><span class="material-icons">arrow_back</span> Voltar</button>
+        </div>
+
+        <!-- RESULT -->
+        <div class="quiz__step" id="result">
+          <div class="quiz__result">
+            <span class="material-icons quiz__whatsapp-icon">chat</span>
+            <p>Sua pré-análise está pronta! Em breve entraremos em contato. 😊</p>
+            <button class="quiz__back" onclick="reiniciarQuiz()"><span class="material-icons">refresh</span> Recomeçar</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RESULTADOS — CARROSSEL ===== -->
+  <section class="results" id="results">
+    <div class="container">
+      <span class="eyebrow eyebrow--light">Evolução Clínica</span>
+      <h2 class="results__title">Resultados</h2>
+      <p class="results__desc">
+        A excelência é nossa única métrica. Nossos procedimentos de transplante capilar utilizam as técnicas mais
+        avançadas do mundo para garantir densidade máxima, angulação natural e um pós-operatório discreto.
+      </p>
+      <blockquote class="results__quote">
+        "A técnica do Robert não apenas devolve o cabelo, devolve a dignidade e a satisfação de se olhar no espelho."
+      </blockquote>
+
+      <!-- CARROSSEL -->
+      <div class="carousel">
+        <div class="carousel__header">
+          <h3 class="carousel__name" id="carouselName">Mc Livinho</h3>
+        </div>
+
+        <div class="carousel__track-wrap">
+          <button class="carousel__btn carousel__btn--prev" id="prevBtn">
+            <span class="material-icons">arrow_back_ios</span>
+          </button>
+
+          <div class="carousel__track" id="carouselTrack">
+
+            <!-- PESSOA 1: MC LIVINHO -->
+            <div class="carousel__person active" data-index="0">
+              <div class="carousel__slides" id="slides0">
+                <div class="carousel__slide active">
+                  <img src="livinho_antes.jpeg" alt="Antes" />
+                  <span class="carousel__label">Antes</span>
+                </div>
+                <div class="carousel__slide">
+                  <img src="livinho_durante.jpeg" alt="Durante" />
+                  <span class="carousel__label">Durante</span>
+                </div>
+                <div class="carousel__slide">
+                  <img src="livinho_depois.jpeg" alt="Depois" />
+                  <span class="carousel__label">Depois</span>
+                </div>
+              </div>
+              <div class="carousel__slide-dots">
+                <span class="carousel__slide-dot active"></span>
+                <span class="carousel__slide-dot"></span>
+                <span class="carousel__slide-dot"></span>
+              </div>
+            </div>
+
+            <!-- PESSOA 2: DUDU CAMARGO -->
+            <div class="carousel__person" data-index="1">
+              <div class="carousel__slides" id="slides1">
+                <div class="carousel__slide active">
+                  <img src="dudu_antes.jpeg" alt="Antes" />
+                  <span class="carousel__label">Antes</span>
+                </div>
+                <div class="carousel__slide">
+                  <img src="dudu_durante.jpeg" alt="Durante" />
+                  <span class="carousel__label">Durante</span>
+                </div>
+                <div class="carousel__slide">
+                  <img src="dudu_depois.jpeg" alt="Depois" />
+                  <span class="carousel__label">Depois</span>
+                </div>
+              </div>
+              <div class="carousel__slide-dots">
+                <span class="carousel__slide-dot active"></span>
+                <span class="carousel__slide-dot"></span>
+                <span class="carousel__slide-dot"></span>
+              </div>
+            </div>
+
+            <!-- PESSOA 3: PACIENTE -->
+            <div class="carousel__person" data-index="2">
+              <div class="carousel__slides" id="slides2">
+                <div class="carousel__slide active">
+                  <img src="anonimo_antes.jpeg" alt="Antes" />
+                  <span class="carousel__label">Antes</span>
+                </div>
+                <div class="carousel__slide">
+                  <img src="anonimo_depois.jpeg" alt="Depois" />
+                  <span class="carousel__label">Depois</span>
+                </div>
+              </div>
+              <div class="carousel__slide-dots">
+                <span class="carousel__slide-dot active"></span>
+                <span class="carousel__slide-dot"></span>
+              </div>
+            </div>
+
+          </div>
+
+          <button class="carousel__btn carousel__btn--next" id="nextBtn">
+            <span class="material-icons">arrow_forward_ios</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PACIENTES ===== -->
+  <section class="patients">
+    <div class="container">
+      <span class="eyebrow">Transformação Real</span>
+      <h2>Pacientes de Destaque</h2>
+      <p>Veja os relatos reais de quem confiou na técnica do Robert Telman.</p>
+      <div class="patients__grid">
+        <div class="patient-card">
+          <div class="patient-card__video">
+            <video src="dudu.mp4" controls preload="metadata">Seu navegador não suporta vídeo.</video>
+          </div>
+          <h4>Dudu Camargo</h4>
+          <p>"Minha Transformação: Devolvendo o volume e a densidade."</p>
+          <a href="https://www.instagram.com/reel/DSXmOK4gJ2F/" target="_blank" class="patient-card__link">
+            <span class="material-icons">open_in_new</span> Assistir no Instagram
+          </a>
+        </div>
+        <div class="patient-card">
+          <div class="patient-card__video">
+            <video src="livinho.mp4" controls preload="metadata">Seu navegador não suporta vídeo.</video>
+          </div>
+          <h4>MC Livinho</h4>
+          <p>"Resultado Natural: O segredo de uma linha frontal perfeita."</p>
+          <a href="https://www.instagram.com/reel/DQors2TACBy/" target="_blank" class="patient-card__link">
+            <span class="material-icons">open_in_new</span> Assistir no Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ROBERT TELMANN ===== -->
+  <section class="doctor" id="telmann">
+    <div class="container doctor__inner">
+      <div class="doctor__text">
+        <span class="eyebrow"></span>
+        <h2>Robert Telmann</h2>
+        <p>
+          <strong style="color: var(--color-gold); font-size: 1.2rem;">| Especialistas em Transplante Capilar</strong><br /><br />
+          Desde 2022 unindo sofisticação, corpo clínico especializado e tecnologia de ponta.
+          Muito mais do que ciência e alta eficácia: entregamos a autoconfiança e a autoestima que você merece.
+        </p>
+        <div class="doctor__badges">
+          <span class="badge">CRM-SP 123456</span>
+          <span class="badge">Membro ISHRS</span>
+          <span class="badge">+5.000 Procedimentos</span>
+        </div>
+        <a href="https://www.instagram.com/telmannclinic/" target="_blank" class="doctor__insta">
+          <span class="material-icons">link</span>
+          Siga no Instagram para acompanhar os bastidores
+        </a>
+      </div>
+      <div class="doctor__photo">
+        <img src="robert.jpeg" alt="Dr. Robert Telmann" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EQUIPE ===== -->
+  <div class="container team">
+    <div class="team__card">
+      <div class="team__photo-wrap">
+        <a href="https://www.instagram.com/roberttelmann/" target="_blank">
+          <img src="rr.jpeg" alt="Robert Telmann" />
+          <div class="team__overlay">
+            <svg class="insta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="team__info">
+        <h4>Robert Telmann</h4>
+        <span>CEO da Telmann Clinic</span>
+      </div>
+    </div>
+    <div class="team__card">
+      <div class="team__photo-wrap">
+        <a href="https://www.instagram.com/williamwiegandt/" target="_blank">
+          <img src="william.jpeg" alt="Dr. William Wiegandt" />
+          <div class="team__overlay">
+            <svg class="insta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="team__info">
+        <h4>Dr. William Wiegandt</h4>
+        <span>Dermatologista e Cientista Capilar</span>
+      </div>
+    </div>
+    <div class="team__card">
+      <div class="team__photo-wrap">
+        <a href="https://www.instagram.com/dra.barbaragamamarim/" target="_blank">
+          <img src="barbara.jpeg" alt="Dra. Bárbara Gama Marim" />
+          <div class="team__overlay">
+            <svg class="insta-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311C8.416 2.175 8.796 2.163 12 2.163zm0-2.163C8.741 0 8.332.014 7.052.072 5.197.157 3.355.673 2.014 2.014.673 3.355.157 5.197.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.085 1.855.601 3.697 1.942 5.038 1.341 1.341 3.183 1.857 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.855-.085 3.697-.601 5.038-1.942 1.341-1.341 1.857-3.183 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.085-1.855-.601-3.697-1.942-5.038C20.645.673 18.803.157 16.948.072 15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zm0 10.162a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+          </div>
+        </a>
+      </div>
+      <div class="team__info">
+        <h4>Dra. Bárbara Gama Marim</h4>
+        <span>Dermatologista Capilar</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img src="logo_telmannclinic.png" alt="Logo" style="filter: brightness(0) invert(1);" />
+          <span>ROBERT TELMANN</span>
+        </div>
+        <p>Excelência Clínica em Restauração Capilar. Elevando o padrão da estética médica com sofisticação, precisão e naturalidade.</p>
+        <div class="footer__socials">
+          <a href="#" title="Site Oficial"><span class="material-icons">public</span></a>
+          <a href="#" title="E-mail"><span class="material-icons">alternate_email</span></a>
+          <a href="tel:+5511949700000" title="Telefone"><span class="material-icons">call</span></a>
+        </div>
+      </div>
+      <div class="footer__col">
+        <h5>A Clínica</h5>
+        <ul>
+          <li><a href="#telmann">Sobre o Robert Telmann</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Suporte</h5>
+        <ul>
+<li><a href="privacidade.html">Política de Privacidade</a></li>
+<li><a href="termos.html">Termos de Uso</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h5>Unidade Alphaville</h5>
+        <address>
+          Alameda Mamoré, 989 - 20º andar. Alphaville - Barueri - SP, 06454-040 <br />
+          contato@telmannclinic.com<br />
+          <a href="https://wa.me/5511930303333" style="display:inline-flex; align-items:center; gap:6px;">
+            <span class="material-icons" style="font-size:1rem;">chat</span>(11) 94970-0000
+          </a>
+          <br />
+          <a href="tel:+551129700000" style="display:inline-flex; align-items:center; gap:6px;">
+            <span class="material-icons" style="font-size:1rem;">call</span>(11) 2970-0000
+          </a>
+        </address>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>
+  </footer>
+
+  <script src="script.js"></script>
+
+  <a href="https://wa.me/5511949700000" target="_blank" class="whatsapp-float">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#c9a84c" width="32" height="32">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+</body>
+</html>
